@@ -1,12 +1,13 @@
-<link rel="shortcut icon" href="https://thepizzaedition.github.io/g/"/>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pizza stuff</title>
+    <link rel="shortcut icon" href="https://thepizzaedition.github.io/g/favicon.ico"/> <!-- Ensure the favicon file exists -->
+    <title>Pizza Stuff</title>
     <style>
         body {
-            margin: 20px;
+            margin: 0; /* Remove default margin */
             padding: 0;
         }
         .container {
@@ -20,7 +21,7 @@
             top: 0;
             left: 0;
             width: 100vw;
-            height: 20px;
+            height: 50px; /* Increased height for better visibility */
             background-color: #000;
             color: #fff;
             display: flex;
@@ -31,22 +32,35 @@
             margin-left: 20px;
             padding: 5px;
             font-size: 20px;
+            background-color: #444; /* Added background color for button */
+            color: white; /* Button text color */
+            border: none; /* Remove border */
+            cursor: pointer; /* Change cursor on hover */
+        }
+        .menu button:hover {
+            background-color: #666; /* Change background on hover */
         }
         .game-area {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100vw;
-            height: 100vh;
+            height: calc(100vh - 50px); /* Adjust height to accommodate menu */
             overflow: hidden;
+            margin-top: 50px; /* Added margin to push content below the menu */
         }
         .game-iframe {
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             border: none;
         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="menu">
+            <button id="menuButton">Toggle Menu</button> <!-- Added button for interaction -->
         </nav>
-        </div>
         <div class="game-area">
             <iframe class="game-iframe" src="https://thepizzaedition.github.io/g/"></iframe>
         </div>
