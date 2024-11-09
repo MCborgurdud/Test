@@ -1,1 +1,1 @@
-dont supply this for money 
+dont supply anything created by me
