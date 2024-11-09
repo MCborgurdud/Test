@@ -21,24 +21,12 @@
             top: 0;
             left: 0;
             width: 100vw;
-            height: 50px; /* Increased height for better visibility */
+            height: 50px; /* Height for the menu */
             background-color: #000;
             color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-        .menu button {
-            margin-left: 20px;
-            padding: 5px;
-            font-size: 20px;
-            background-color: #444; /* Added background color for button */
-            color: white; /* Button text color */
-            border: none; /* Remove border */
-            cursor: pointer; /* Change cursor on hover */
-        }
-        .menu button:hover {
-            background-color: #666; /* Change background on hover */
         }
         .game-area {
             display: flex;
@@ -47,23 +35,26 @@
             width: 100vw;
             height: calc(100vh - 50px); /* Adjust height to accommodate menu */
             overflow: hidden;
-            margin-top: 50px; /* Added margin to push content below the menu */
+            margin-top: 50px; /* Move game area below the menu */
         }
         .game-iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
-        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="menu">
+            <!-- Menu can be empty or you can add items here in the future -->
         </nav>
         <div class="game-area">
             <iframe class="game-iframe" src="https://thepizzaedition.github.io/g/"></iframe>
         </div>
     </div>
     <script>
-        document.getElementById('menuButton').addEventListener('click', function() {
-            document.querySelector('.menu').classList.toggle('active');
-        });
+        // Removed JavaScript related to toggling the menu since the button is gone
     </script>
 </body>
 </html>
