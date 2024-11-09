@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://thepizzaedition.github.io/g/favicon.ico"/> <!-- Ensure the favicon file exists -->
+    <title>Pizza Stuff</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Full height of viewport */
+            width: 100vw; /* Full width of viewport */
+        }
+        .menu {
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+        .game-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw; /* Full width */
+            height: 100%; /* Take remaining height of the container */
+            overflow: hidden;
+        }
+        .game-iframe {
+            width: 100%; /* Full width of the game area */
+            height: 100%; /* Full height of the game area */
+            border: none; /* No border around iframe */
+        }
+        #fileInput {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="menu">
+            <input type="file" id="fileInput" accept=".html">
+        </nav>
+        <div class="game-area">
+            <iframe id="gameIframe" class="game-iframe" src="https://thepizzaedition.github.io/g/"></iframe>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    const content = e.target.result;
+                    const blob = new Blob([content], { type: 'text/html' });
+                    const url = URL.createObjectURL(blob);
+                    document.getElementById('gameIframe').src = url; // Set the iframe source to the new URL
+                };
+
+                reader.readAsText(file);
+            } else {
+                document.getElementById('gameIframe').src = "https://thepizzaedition.github.io/g/"; // Reset to default
+            }
+        });
+    </script>
+</body>
+</html>
