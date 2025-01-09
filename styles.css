@@ -1,7 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: transparent;
     background-image: url("360_F_664593339_ENRU5lXwAiszjx8ZDXhED22vh1sEIFl1.png");
+    backround-size: cover;
+    backround-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
