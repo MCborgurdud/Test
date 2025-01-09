@@ -3,6 +3,7 @@ body {
     background-image: url("360_F_664593339_ENRU5lXwAiszjx8ZDXhED22vh1sEIFl1.png");
     backround-size: cover;
     backround-position: center;
+    background-color:transparent;
     display: flex;
     justify-content: center;
     align-items: center;
