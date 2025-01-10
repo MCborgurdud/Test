@@ -1,8 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url("360_F_664593339_ENRU5lXwAiszjx8ZDXhED22vh1sEIFl1.png") no-repeat;
-    backround-size: cover;
-    backround-position: center;
+    background-image: url("360_F_664593339_ENRU5lXwAiszjx8ZDXhED22vh1sEIFl1.png");
+    background-repeat: no-repeat; /* Fixed spelling of 'background-repeat' */
+    background-size: cover; /* Fixed spelling of 'background-size' */
+    background-position: center; /* Fixed spelling of 'background-position' */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +18,7 @@ body {
     border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, .5);
     box-shadow: 0 0 25px rgba(0, 0, 0, .5);
-    backdrop-filter: blur(20px)
+    backdrop-filter: blur(20px);
 }
 
 h1 {
